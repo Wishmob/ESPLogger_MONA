@@ -21,13 +21,12 @@
 #define ESPLOGGER_H
 
 #include <FS.h>
-#include <LittleFS.h>
 
 class ESPLogger {
 public:
   typedef bool (*CallbackFlush)(const char *buffer, int n);
 
-  ESPLogger(String file, FS &fs = LittleFS);
+  ESPLogger(String file, FS &fs);
 
   virtual ~ESPLogger(){};
 
